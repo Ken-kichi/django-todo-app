@@ -1,7 +1,7 @@
 # django-todo-app
 
 初心者向けの Todo アプリ（Django）
-[プロジェクト名]
+[django-todo-app]
 
 ## 概要
 
@@ -91,5 +91,3 @@ python manage.py runserver
 - `todo_list.html`: タスクの一覧を表示するテンプレートです。
 - `todo_form.html`: タスクの作成と更新のためのフォームを表示するテンプレートです。
 - `todo_confirm_delete.html`: タスクの削除確認画面を表示するテンプレートです。
-
-以上で、このプロジェクトの README が完成です。アプリの実行方法や機能についての詳細な情報が記載されており、プロジェクトの利用者や開発者にとって有用な情報となるでしょう。
