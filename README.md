@@ -9,7 +9,7 @@
 
 ## 動作環境
 
-このアプリケーションは、以下の環境で動作確認を行っています：
+このアプリケーションは、以下の環境で動作確認を行っています。
 
 - Python 3.10.4
 - Django 4.2.4
@@ -24,19 +24,42 @@
 pip install Django
 ```
 
-3. プロジェクトのソースコードをダウンロードするか、クローンしてください。
+3. リポジトリをクローンします。
+
+```bash
+git clone https://github.com/Ken-kichi/django-todo-app.git
+cd django-todo-app
+```
 
 ## 実行方法
 
 1. ターミナル（コマンドプロンプト）を開き、プロジェクトのルートディレクトリに移動します。
 
-2. データベースのマイグレーションを行います：
+2. 仮想環境を作成します。
+
+```bash
+python -m venv .venv
+```
+
+3. 仮想環境を起動します。
+
+```bash
+source .venv/bin/activate
+```
+
+4. requirements.txt に書かれてあるライブラリを読み込みます。
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+5. データベースをマイグレーションします。
 
 ```bash
 python manage.py migrate
 ```
 
-3. 開発用サーバーを起動します：
+6. 開発用サーバーを起動します。
 
 ```bash
 python manage.py runserver
@@ -53,27 +76,9 @@ python manage.py runserver
 - タスクの更新
 - タスクの削除
 
-## ライセンス
-
-このプロジェクトは[MIT ライセンス](LICENSE)のもとで公開されています。
-
-## 作者
-
-- [名前](https://github.com/ユーザー名)
-
-## バグ報告と提案
-
-バグを見つけた場合や改善の提案がある場合は、[Issues](https://github.com/ユーザー名/プロジェクト名/issues) セクションに報告してください。
-
-## 貢献
-
-このプロジェクトに貢献する場合は、Fork して Pull Request を送ってください。
-
 ## 注意事項
 
 このアプリケーションは学習目的のために作成されており、実際のプロダクション環境での使用を意図していません。
-
-## 開発者向け情報
 
 ### モデル
 
@@ -91,5 +96,3 @@ python manage.py runserver
 - `todo_list.html`: タスクの一覧を表示するテンプレートです。
 - `todo_form.html`: タスクの作成と更新のためのフォームを表示するテンプレートです。
 - `todo_confirm_delete.html`: タスクの削除確認画面を表示するテンプレートです。
-
-以上で、このプロジェクトの README が完成です。アプリの実行方法や機能についての詳細な情報が記載されており、プロジェクトの利用者や開発者にとって有用な情報となるでしょう。
