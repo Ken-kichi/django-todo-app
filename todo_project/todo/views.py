@@ -2,10 +2,12 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import TodoTask
 from .forms import TodoTaskForm
 
+# Todoのリストを表示する機能
 def todo_list(request):
     tasks = TodoTask.objects.all()
     return render(request, 'todo/todo_list.html', {'tasks': tasks})
 
+# Todoを作成する機能
 def todo_create(request):
     if request.method == 'POST':
         form = TodoTaskForm(request.POST)
@@ -16,6 +18,7 @@ def todo_create(request):
         form = TodoTaskForm()
     return render(request, 'todo/todo_form.html', {'form': form})
 
+# Todoを更新する機構
 def todo_update(request, pk):
     task = get_object_or_404(TodoTask, pk=pk)
     if request.method == 'POST':
@@ -27,6 +30,7 @@ def todo_update(request, pk):
         form = TodoTaskForm(instance=task)
     return render(request, 'todo/todo_form.html', {'form': form})
 
+# Todoを削除する機能
 def todo_delete(request, pk):
     task = get_object_or_404(TodoTask, pk=pk)
     if request.method == 'POST':
