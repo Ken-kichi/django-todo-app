@@ -1,7 +1,7 @@
 # django-todo-app
 
 初心者向けの Todo アプリ（Django）
-[プロジェクト名]
+[django-todo-app]
 
 ## 概要
 
